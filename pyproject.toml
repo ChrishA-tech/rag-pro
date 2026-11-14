@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-pro"
+version = "0.1.0"
+description = "Production-style RAG: hybrid retrieval, reranking, multi-query, grounding checks, evaluation, API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.24", "scikit-learn>=1.3", "fastapi>=0.110", "uvicorn>=0.27", "pydantic>=2"]
+
+[project.optional-dependencies]
+pdf = ["pypdf>=4"]
+llm = ["anthropic>=0.40"]
+st = ["sentence-transformers>=2.7"]
+dev = ["pytest>=8", "httpx>=0.27"]
+
+[project.scripts]
+rag-pro = "rag_pro.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["rag_pro*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

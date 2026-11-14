@@ -1,0 +1,25 @@
+"""Labelled QA set. gold_docs = documents that contain the answer; [] = unanswerable (should abstain)."""
+
+QA = [
+    {"q": "Why does adding retrieved passages to the prompt reduce made-up answers?", "gold_docs": ["rag_overview"], "keywords": ["evidence", "memory"]},
+    {"q": "What goes wrong when text chunks are too large?", "gold_docs": ["chunking_strategies"], "keywords": ["dilute"]},
+    {"q": "How much should neighbouring chunks overlap?", "gold_docs": ["chunking_strategies"], "keywords": ["10", "20"]},
+    {"q": "Which index structures speed up nearest-neighbour lookup?", "gold_docs": ["embeddings_and_vector_search"], "keywords": ["hnsw", "ivf"]},
+    {"q": "How does rank fusion combine lexical and semantic results, and what constant is typical?", "gold_docs": ["hybrid_search_and_reranking"], "keywords": ["60"]},
+    {"q": "Why are cross-encoders slower but more accurate for reordering results?", "gold_docs": ["hybrid_search_and_reranking"], "keywords": ["together", "forward pass"]},
+    {"q": "What does MRR measure?", "gold_docs": ["evaluation_of_rag"], "keywords": ["rank", "first relevant"]},
+    {"q": "How can I detect answers that are not supported by the sources?", "gold_docs": ["hallucination_and_grounding"], "keywords": ["sentence", "passage"]},
+    {"q": "Can a retrieved web page hijack the model's behaviour?", "gold_docs": ["prompt_injection_in_rag"], "keywords": ["instructions", "hijack"]},
+    {"q": "How do I enforce per-user document permissions?", "gold_docs": ["production_deployment"], "keywords": ["metadata", "filter"]},
+    {"q": "What should be monitored in a live RAG system?", "gold_docs": ["production_deployment"], "keywords": ["latency", "feedback"]},
+    {"q": "When do exact keyword matches beat embeddings?", "gold_docs": ["hybrid_search_and_reranking"], "keywords": ["codes", "identifiers"]},
+    {"q": "What must I do if I swap the embedding model?", "gold_docs": ["production_deployment", "embeddings_and_vector_search"], "keywords": ["re-embed"]},
+    {"q": "What is a golden dataset used for?", "gold_docs": ["evaluation_of_rag"], "keywords": ["regressions"]},
+    {"q": "Why should the assistant sometimes refuse to answer?", "gold_docs": ["hallucination_and_grounding"], "keywords": ["wrong", "refusal"]},
+    {"q": "What is parent-child retrieval?", "gold_docs": ["chunking_strategies"], "keywords": ["parent", "child"]},
+    {"q": "How does MMR improve results?", "gold_docs": ["hybrid_search_and_reranking"], "keywords": ["repeat", "diversity"]},
+    {"q": "Which metrics describe the generation side of RAG quality?", "gold_docs": ["evaluation_of_rag"], "keywords": ["faithfulness"]},
+    {"q": "What is the capital of France?", "gold_docs": [], "keywords": []},
+    {"q": "Who won the 2018 football world cup?", "gold_docs": [], "keywords": []},
+    {"q": "How do I bake sourdough bread?", "gold_docs": [], "keywords": []},
+]
