@@ -27,3 +27,4 @@ node_modules/
 .streamlit/secrets.toml
 *.log
 .autopush/
+!.env.example
